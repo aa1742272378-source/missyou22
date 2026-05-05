@@ -17,9 +17,11 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100svh;
   color: var(--ink);
   background: #0f0f0f;
   font-family: Inter, Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -33,10 +35,12 @@ a {
 
 .panel {
   min-height: 100vh;
+  min-height: 100svh;
 }
 
 .panel-main {
   min-height: 100vh;
+  min-height: 100svh;
 }
 
 .stage-video {
@@ -44,6 +48,7 @@ a {
   inset: 0;
   width: 100vw;
   height: 100vh;
+  height: 100svh;
   object-fit: cover;
   object-position: center center;
   opacity: 0;
@@ -63,6 +68,7 @@ a {
   z-index: 2;
   overflow: hidden;
   pointer-events: none;
+  min-height: 100svh;
 }
 
 .surface::before,
@@ -106,6 +112,7 @@ a {
   align-items: center;
   gap: 32px;
   padding: 18px 38px;
+  padding-top: calc(18px + env(safe-area-inset-top));
   color: rgba(247, 244, 238, 0.72);
   font-size: 14px;
   font-weight: 700;
@@ -349,6 +356,8 @@ h1 span {
   align-items: center;
   gap: 0;
   padding: 0 38px;
+  padding-right: calc(38px + env(safe-area-inset-right));
+  padding-left: calc(38px + env(safe-area-inset-left));
   background: var(--bar);
   backdrop-filter: blur(14px);
   overflow: hidden;
@@ -382,6 +391,7 @@ h1 span {
 .chapter {
   right: 52px;
   bottom: 31px;
+  right: calc(52px + env(safe-area-inset-right));
   display: flex;
   gap: 4px;
   color: rgba(247, 244, 238, 0.52);
@@ -394,6 +404,9 @@ h1 span {
   .nav {
     grid-template-columns: 1fr auto;
     padding: 18px 20px;
+    padding-top: calc(18px + env(safe-area-inset-top));
+    padding-right: calc(20px + env(safe-area-inset-right));
+    padding-left: calc(20px + env(safe-area-inset-left));
   }
 
   .nav-links {
@@ -403,7 +416,9 @@ h1 span {
   .hero-copy {
     top: 13vh;
     left: 20px;
+    left: calc(20px + env(safe-area-inset-left));
     width: calc(100vw - 40px);
+    width: calc(100vw - 40px - env(safe-area-inset-left) - env(safe-area-inset-right));
   }
 
   h1 {
@@ -417,6 +432,7 @@ h1 span {
   .stats {
     top: auto;
     right: 20px;
+    right: calc(20px + env(safe-area-inset-right));
     bottom: 112px;
     width: min(46vw, 290px);
     gap: 18px;
@@ -435,6 +451,8 @@ h1 span {
   .dock {
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     padding: 0 18px;
+    padding-right: calc(18px + env(safe-area-inset-right));
+    padding-left: calc(18px + env(safe-area-inset-left));
     overflow: hidden;
   }
 
@@ -463,5 +481,17 @@ h1 span {
 
   .stats {
     display: none;
+  }
+
+  .hero-copy {
+    top: 15svh;
+  }
+
+  h1 {
+    font-size: clamp(46px, 13.5vw, 72px);
+  }
+
+  .start-btn {
+    min-height: 50px;
   }
 }

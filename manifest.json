@@ -1,0 +1,11 @@
+{
+  "name": "Brandly Scroll Video",
+  "short_name": "Brandly",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "orientation": "portrait-primary",
+  "icons": []
+}
