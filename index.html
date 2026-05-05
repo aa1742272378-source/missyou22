@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brandly Scroll Video</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="scroll-stage" aria-label="Brandly scroll video website">
+      <section class="panel panel-intro" id="intro" aria-label="首视频">
+        <video class="stage-video is-visible" id="introVideo" src="./assets/01.mp4" muted playsinline autoplay loop preload="auto"></video>
+      </section>
+
+      <section class="panel panel-main" id="mainScroll" aria-label="主视频滚动同步">
+        <video class="stage-video" id="mainVideo" src="./assets/02.mp4" muted playsinline preload="auto"></video>
+      </section>
+
+      <section class="panel panel-outro" id="outro" aria-label="尾视频">
+        <video class="stage-video" id="outroVideo" src="./assets/03.mp4" muted playsinline autoplay loop preload="auto"></video>
+      </section>
+
+      <div class="surface">
+        <header class="nav">
+          <a class="brand" href="#intro">BRANDLY</a>
+          <nav class="nav-links" aria-label="页面导航">
+            <a href="#intro">About</a>
+            <a href="#mainScroll">Features</a>
+            <a href="#mainScroll">Pricing</a>
+            <a href="#outro">FAQ</a>
+            <a href="#outro">Help</a>
+          </nav>
+          <div class="nav-actions">
+            <a class="signup" href="#mainScroll">Sign Up</a>
+            <a class="login" href="#outro">Log In</a>
+          </div>
+        </header>
+
+        <section class="hero-copy">
+          <p class="kicker">BRAND STUDIO - CHAPTER 01</p>
+          <h1>BUILDING<br />BRANDS THAT<br /><span>RESONATE</span></h1>
+          <p class="lead">Thoughtful design that captivates, empowers, and creates lasting impact.</p>
+          <a class="start-btn" href="#mainScroll">
+            <span>Start today</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </section>
+
+        <section class="designer-note">
+          <p>I'm a brand designer partnering with companies and founders to craft distinct, authentic identities through sharp visuals and clear narratives.</p>
+          <div class="socials" aria-label="社交链接">
+            <a href="#intro">f</a>
+            <a href="#mainScroll">•</a>
+            <a href="#outro">▷</a>
+          </div>
+        </section>
+
+        <aside class="stats" aria-label="项目数据">
+          <section class="stat">
+            <strong>50+</strong>
+            <h2>BRANDS LAUNCHED</h2>
+            <p>From ambitious new ventures to established companies seeking a powerful refresh.</p>
+          </section>
+          <div class="pager" aria-hidden="true">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+          <section class="stat">
+            <strong>5+</strong>
+            <h2>YEARS IN THE INDUSTRY</h2>
+            <p>Merging imagination with purpose to create enduring, impactful identities.</p>
+          </section>
+        </aside>
+
+        <div class="scroll-cue" aria-hidden="true">SCROLL</div>
+
+        <div class="progress" aria-label="主视频滚动进度">
+          <span id="progressFill"></span>
+        </div>
+
+        <footer class="dock" aria-label="视频阶段">
+          <a class="dock-item" href="#intro"><span></span>SUPA BLOX</a>
+          <a class="dock-item" href="#mainScroll"><span></span>HYPE BLOX</a>
+          <a class="dock-item active" href="#mainScroll"><span></span>ULTRA BLOX</a>
+          <a class="dock-item" href="#outro"><span></span>SHIP BLOX</a>
+          <a class="dock-item" href="#intro"><span></span>FRAME BLOX</a>
+          <a class="dock-item" href="#mainScroll"><span></span>SUPA BLOX</a>
+          <a class="dock-item" href="#mainScroll"><span></span>HYPE BLOX</a>
+          <a class="dock-item" href="#outro"><span></span>ULTRA BLOX</a>
+          <a class="dock-item" href="#outro"><span></span>SHIP BLOX</a>
+        </footer>
+
+        <div class="chapter" aria-live="polite">
+          <span id="chapterNow">01</span><span>/</span><span>03</span>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
