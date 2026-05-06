@@ -190,7 +190,6 @@ p {
   margin-top: 0;
 }
 
-h1,
 h2,
 .stat strong {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -199,9 +198,11 @@ h2,
 
 h1 {
   margin-bottom: 25px;
-  font-size: clamp(64px, 6.2vw, 118px);
-  line-height: 0.9;
-  text-transform: uppercase;
+  font-family: "Arial Black", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-size: clamp(52px, 5.2vw, 92px);
+  font-weight: 950;
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 
 h1 span {
@@ -209,7 +210,7 @@ h1 span {
 }
 
 .lead {
-  width: min(27vw, 450px);
+  width: min(31vw, 520px);
   margin-bottom: 36px;
   color: var(--muted);
   font-size: 17px;
@@ -244,7 +245,7 @@ h1 span {
 .designer-note {
   left: 38px;
   bottom: 153px;
-  width: min(24vw, 340px);
+  width: min(25vw, 390px);
 }
 
 .designer-note p {
@@ -422,7 +423,7 @@ h1 span {
   }
 
   h1 {
-    font-size: clamp(52px, 14vw, 94px);
+    font-size: clamp(42px, 10.5vw, 72px);
   }
 
   .lead {
@@ -488,7 +489,7 @@ h1 span {
   }
 
   h1 {
-    font-size: clamp(46px, 13.5vw, 72px);
+    font-size: clamp(38px, 10vw, 58px);
   }
 
   .start-btn {
